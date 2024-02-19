@@ -5,8 +5,6 @@ const Form = function<T extends FieldValues>({ defaultValues, children, onSubmit
     const methods = useForm<T>({ defaultValues })
     const { handleSubmit, formState: {errors} } = methods
 
-    console.log(errors)
-
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             { React.Children.count(children) && React.Children.map(children, (child) => {
