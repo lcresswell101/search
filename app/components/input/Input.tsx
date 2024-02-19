@@ -10,6 +10,8 @@ type InputType = {
 }
 
 const Input = ({register, rules, type, name, placeholder, className}: InputType) => {
+    const classNames = className + " drop-shadow-sm p-3"
+
     return (
         <label htmlFor={name}>
             <input
@@ -17,7 +19,7 @@ const Input = ({register, rules, type, name, placeholder, className}: InputType)
                 name={name}
                 type={type}
                 placeholder={placeholder}
-                className={className}
+                className={classNames}
             />
         </label>
     )

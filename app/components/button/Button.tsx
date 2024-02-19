@@ -6,10 +6,12 @@ type ButtonType = {
 }
 
 const Button = ({ type = 'button', className, text, disabled = false}: ButtonType) => {
+    const classNames = className + " drop-shadow-sm p-3"
+
     return (
         <button
             type={type}
-            className={className}
+            className={classNames}
             disabled={disabled}
         >
             { text }
